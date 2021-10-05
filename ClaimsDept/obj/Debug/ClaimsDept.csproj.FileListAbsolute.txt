@@ -1,0 +1,7 @@
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\ClaimsDept\bin\Debug\ClaimsDept.exe.config
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\ClaimsDept\bin\Debug\ClaimsDept.exe
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\ClaimsDept\bin\Debug\ClaimsDept.pdb
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\ClaimsDept\obj\Debug\ClaimsDept.csproj.CoreCompileInputs.cache
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\ClaimsDept\obj\Debug\ClaimsDept.exe
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\ClaimsDept\obj\Debug\ClaimsDept.pdb
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\ClaimsDept\obj\Debug\ClaimsDept.csproj.AssemblyReference.cache
