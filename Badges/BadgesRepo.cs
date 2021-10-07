@@ -14,35 +14,26 @@ namespace Badges
 
         //Create this method will add a new badge to the dictionary
 
-        public void AddABadge(int badgeIdNumber, List<string> doorAccess )
+        public bool AddANewBadge(Badges badge)
         {
-            Badges newBadge = new Badges(badgeIdNumber, doorAccess);
+            
 
             int startingCount = _badgesDictionary.Count;
 
-            _badgesDictionary.Add(badgeIdNumber, newBadge);
+            _badgesDictionary.Add(badge.BadgeIdNumber, badge);
+
+            bool badgeWasAdded = (_badgesDictionary.Count > startingCount) ? true : false;
+
+            return badgeWasAdded;
+        }
 
             
-
-            
-        }
-        //  Read   Show all badges and get badge by id number 
-        public Dictionary<int, Badges> DisplayAllBadges()
-        {
-            return _badgesDictionary;
-        }
-
-        public Badges GetBadgeByIdNumber(int badgeIdNumber)
-        {
-            return _badgesDictionary[badgeIdNumber];
-        }
-
         //Add Door access
         public bool AddDoorAccess(int badgeIdNumber, List<string> newDoorAccess) 
         {
             Badges theBadge = GetBadgeByIdNumber(badgeIdNumber);
             int startingCount = theBadge.DoorAccess.Count();
-
+                          //adds elements to the end of List T
             theBadge.DoorAccess.AddRange(newDoorAccess);
 
             bool wasAdded = (theBadge.DoorAccess.Count > startingCount) ? true : false;
@@ -50,6 +41,31 @@ namespace Badges
             return wasAdded;
 
         }
+
+            
+        //  Read   Show all badges and get badge by id number 
+        public Dictionary<int, Badges> PresentAllBadges()
+        {
+            return _badgesDictionary;
+        }
+        public Badges GetBadgeByIdNumber(int badgeIdNumber)
+        {
+            return _badgesDictionary[badgeIdNumber];
+        }
+
+        //Get Doors by Id Number
+        public string GetDoorsByIdNumber(int badgeIdNumber)
+        {
+            Badges theBadge = GetBadgeByIdNumber(badgeIdNumber);
+            if (theBadge != null)
+            {       //will return the string values seperated all nice and fancy 
+                return string.Join(" ", theBadge.DoorAccess);
+            }
+            return "We're sorry that Badge could not be found."; 
+
+        }
+
+
 
         //Delete Door access
         public bool RemoveDoorAccess(int badgeIdNumber, string doorAccess)
@@ -63,9 +79,10 @@ namespace Badges
 
             return wasRemoved;
         }
-
     }
 }
+    
+
 
 
      
