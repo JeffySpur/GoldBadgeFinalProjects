@@ -110,6 +110,10 @@ Here's the badges app we needed to build using a dictionary.
 
 Komodo Insurance is fixing their badging system.
 
+i was never able to figure out why my display all badges method wasnt working but the rest of the console is functional 
+this was def the hardest thing ive done in coding 
+even though it doesnt all work im proud of it because i understand it and wrote it all 
+
  
 
 Here's what they need:
