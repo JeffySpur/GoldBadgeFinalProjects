@@ -2,7 +2,8 @@
 
 
 Komodo Cafe these are all propmts to build different console apps the first one was komodo cafe.
-We used lists to build this one. 
+```We used lists to build this one.````
+````Not incredibly difficult i say that so i hope i did well haha```` 
 
 
 
@@ -29,9 +30,9 @@ Create a Program file that allows the cafe manager to add, delete, and see all i
 Notes:
 We don't need to be able to update items right now.
 
-Komodo Claims Challenge this one took me some time i realized about halfway through finishing that i needed to use a queue 
-we used a queue and its functions to build this one 
-
+```Komodo Claims Challenge this one took me some time i realized about halfway through finishing that i needed to use a queue``` 
+```we used a queue and its functions to build this one``` 
+````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 Komodo Claims Department
 Komodo has a bug in its software and needs some new code.
 
@@ -110,9 +111,10 @@ Here's the badges app we needed to build using a dictionary.
 
 Komodo Insurance is fixing their badging system.
 
-i was never able to figure out why my display all badges method wasnt working but the rest of the console is functional 
-this was def the hardest thing ive done in coding 
-even though it doesnt all work im proud of it because i understand it and wrote it all 
+`````i was never able to figure out why my display all badges method wasnt working but the rest of the console is functional```` 
+`````````this was def the hardest thing ive done in coding`````````````````````````````````````` 
+``````````````````even though it doesnt all work im proud of it because i understand it and wrote it all````````````````````````
+````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 
  
 
