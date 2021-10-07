@@ -82,11 +82,12 @@ namespace ClaimsDept
         {
             Queue<ClaimsDept> listOfClaims = _claimsRepo.DisplayAllClaims();
 
+            //here we are newing up a string array and then using it to interpolate a string array the numbers in the [] refer to the string array stated above the cwriteline.. the -10 numbers determine there sapcing in the console
             string[] claimArray = new string[] { "ClaimId", "ClaimType", "ClaimDescription", "ClaimAmount", "DateOfIncedent", "DateOfClaim", "ClaimIsValid" };
-            Console.WriteLine($" {claimArray[0],-10}{claimArray[1],-10}{claimArray[2],-30}{claimArray[3],-15}{claimArray[4],-20}{claimArray[5],-20}{claimArray[6],-15}");
+            Console.WriteLine($" {claimArray[0],-8}{claimArray[1],-8}{claimArray[2],-27}{claimArray[3],-13}{claimArray[4],-17}{claimArray[5],-17}{claimArray[6],-13}");
             foreach (ClaimsDept claims in listOfClaims)
             {
-                Console.Write($"{claims.ClaimIDNumber,-10}{claims.TypeOfClaim,-10}{claims.ClaimDescription,-30}{claims.ClaimAmount,-15}{claims.DateOfIncendent,-20:mm/dd/yyyy}{claims.DateOfClaim,-20:mm/dd/yyy}{claims.ClaimIsValid,-15}\n");
+                Console.Write($"{claims.ClaimIDNumber,-8}{claims.TypeOfClaim,-8}{claims.ClaimDescription,-27}{claims.ClaimAmount,-13}{claims.DateOfIncendent,-17:mm/dd/yyyy}{claims.DateOfClaim,-17:mm/dd/yyy}{claims.ClaimIsValid,-13}\n");
             }
             
         }
@@ -98,19 +99,24 @@ namespace ClaimsDept
         {
 
             Console.Clear();
+            //This is my peek method established in my repo 
             DisplayClaim();
-            Console.WriteLine("Here are some details for the next claim to be handled would you like to handle the queue?\n");
+            //user display
+            Console.WriteLine("Here are some details for the next claim to be handled would you like to handle the claim?\n");
             string input = Console.ReadLine();
             if (input == "y")
             {
+                //retuen claims queue knock off the top of queue (Dequeue)
                 _claimsRepo._claimsQueue.Dequeue();
             }
             else if (input == "n")
             {
+                //Return claims menu
                 ClaimsMenu();
             }
             else
             {
+                //just a safety net if they are dumb 
                 Console.WriteLine("Please enter a valid response ex: y or n");
                 ShowNextClaim();
             }

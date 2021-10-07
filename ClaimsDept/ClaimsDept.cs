@@ -20,7 +20,7 @@ namespace ClaimsDept
         public DateTime DateOfClaim { get; set; }
 
         public bool ClaimIsValid
-            //Understanding get  
+            //This is a method that does the math for you to determine if the claim is valid and returns because it is a bool
             
         {
             get

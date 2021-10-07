@@ -6,8 +6,8 @@ Here's what they need:
 An app that maintains a dictionary of details about employee badge information. (Hint: A dictionary is a collection type in C#. You'll want to use that.)
 
 //Dictionary is what i will need//
-//my Dirctionary will contain a list of employess 
-//each employee will have a certain level of access to certain things on the menu 
+//my Dirctionary will contain a list of employess or badges in this case
+//each badge will have a certain level of access to certain Doors 
 // this can be done with int's and bools im pretty sure 
 
 
@@ -23,6 +23,7 @@ A badge class that has the following properties:
 BadgeID
 //Assign each employee an int 
 List of door names for access
+//DoorA DoorB DoorC
 
 //I think ill need an enum to allow access but look into it bubba
  
