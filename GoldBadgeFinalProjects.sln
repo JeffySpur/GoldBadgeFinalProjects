@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsDept", "ClaimsDept\Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Badges", "Badges\Badges.csproj", "{64C57351-DA8E-4EDE-B2D6-9C8F29479BD9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadgesRepoTests", "BadgesRepoTests\BadgesRepoTests.csproj", "{CA7D83C1-C802-4BBB-A0DD-CEC865A063A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{64C57351-DA8E-4EDE-B2D6-9C8F29479BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64C57351-DA8E-4EDE-B2D6-9C8F29479BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64C57351-DA8E-4EDE-B2D6-9C8F29479BD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA7D83C1-C802-4BBB-A0DD-CEC865A063A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7D83C1-C802-4BBB-A0DD-CEC865A063A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7D83C1-C802-4BBB-A0DD-CEC865A063A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7D83C1-C802-4BBB-A0DD-CEC865A063A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

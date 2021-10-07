@@ -29,12 +29,12 @@ namespace Badges
 
             
         //Add Door access
-        public bool AddDoorAccess(int badgeIdNumber, List<string> newDoorAccess) 
+        public bool AddDoorAccess(int badgeIdNumber, string newDoorAccess) 
         {
             Badges theBadge = GetBadgeByIdNumber(badgeIdNumber);
             int startingCount = theBadge.DoorAccess.Count();
                           //adds elements to the end of List T
-            theBadge.DoorAccess.AddRange(newDoorAccess);
+            theBadge.DoorAccess.Add(newDoorAccess);
 
             bool wasAdded = (theBadge.DoorAccess.Count > startingCount) ? true : false;
 

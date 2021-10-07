@@ -1,0 +1,7 @@
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\Badges\bin\Debug\Badges.exe.config
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\Badges\bin\Debug\Badges.exe
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\Badges\bin\Debug\Badges.pdb
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\Badges\obj\Debug\Badges.csproj.AssemblyReference.cache
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\Badges\obj\Debug\Badges.csproj.CoreCompileInputs.cache
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\Badges\obj\Debug\Badges.exe
+C:\Users\Krista Keller\source\repos\GoldBadgeFinalProjects\Badges\obj\Debug\Badges.pdb

@@ -20,7 +20,7 @@ namespace Badges
             bool keepRunning = true;
             while (keepRunning)
             {
-                Console.WriteLine("Hello Sec Admin and welcome to the Main Menu what would you like to do?" +
+                Console.WriteLine("Hello Sec Admin and welcome to the Main Menu what would you like to do?\n" +
                     "1. Add a Badge\n" +
                     "2. Edit a Badge\n" +
                     "3. List all badges\n" +
@@ -57,7 +57,7 @@ namespace Badges
             Badges newBadge = new Badges();
 
             Console.WriteLine("What is the number on the Badge?");
-            newBadge.BadgeIdNumber = Convert.ToInt32(Console.ReadLine()); 
+            newBadge.BadgeIdNumber = Convert.ToInt32(Console.ReadLine());
 
             List<string> doorAccess = new List<string>();
 
@@ -78,9 +78,13 @@ namespace Badges
                     break;
                 }
             }
+
             while (userInput == "y");
+
             newBadge.DoorAccess = doorAccess;
+
             bool accessWasAdded = _badgesRepo.AddANewBadge(newBadge);
+
             if (accessWasAdded)
             {
                 Console.WriteLine("This Badge has successfully been added.");
@@ -101,6 +105,7 @@ namespace Badges
 
             Badges theBadge = _badgesRepo.GetBadgeByIdNumber(userInput);
             string door = _badgesRepo.GetDoorsByIdNumber(userInput);
+
             Console.WriteLine($"{theBadge.BadgeIdNumber} this badge has access to these doors {door}.");
             Console.ReadKey();
             Console.Clear();
@@ -114,43 +119,70 @@ namespace Badges
             switch (input)
             {
                 case "1":
-                    Console.WriteLine("What Door Access do you want to remove for this Badge?");
-                    string doorOneInput = Console.ReadLine().ToUpper();
+                    string userinput1 = default;
+                    do
+                    {
+                        Console.WriteLine("What Door Access do you want to remove for this Badge?");
+                        string doorOneInput = Console.ReadLine().ToUpper();
 
-                    bool doorAccessRemoved = _badgesRepo.RemoveDoorAccess(theBadge.BadgeIdNumber, doorOneInput);
-                    if (doorAccessRemoved)
-                    {
-                        Console.WriteLine("Access to that door has been removed");
-                        string doorList = _badgesRepo.GetDoorsByIdNumber(userInput);
-                        Console.WriteLine($"{theBadge.BadgeIdNumber}this badge has access to these doors.");
+                        bool doorAccessRemoved = _badgesRepo.RemoveDoorAccess(theBadge.BadgeIdNumber, doorOneInput);
+                        if (doorAccessRemoved)
+                        {
+                            Console.WriteLine("Access to that door has been removed");
+                            string doorList = _badgesRepo.GetDoorsByIdNumber(userInput);
+                            Console.WriteLine($"{theBadge.BadgeIdNumber}this badge has access to these doors{doorList}.");
+
+                            Console.WriteLine("Any other doors? (y/n)?");
+                            if (userinput1 == "n")
+                            { break; }
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Unfortunately Access to that door could not be removed.");
+                        }
                     }
-                    else 
-                    {
-                        Console.WriteLine("Unfortunately Access to that door could not be removed.");
-                    }
+                    while (userinput1 == "y");
                     break;
+
                 case "2":
-                    Console.WriteLine("Please enter the Door Access you would like to grant.");
+                    string userInputTwo = default;
 
-                    string doorTwoInput = Console.ReadLine().ToUpper();
-
-
-                    bool doorAccessGranted = _badgesRepo.AddDoorAccess(theBadge.BadgeIdNumber, doorTwoInput);
-                    if (doorAccessGranted)
+                    do
                     {
-                        Console.WriteLine("Access to that door has been added.");
-                        string doorTwoList = _badgesRepo.GetDoorsByIdNumber(userInput);
-                        Console.WriteLine($"{theBadge.BadgeIdNumber} this badge has access to these doors {doorTwoList}");
+                        Console.WriteLine("Please enter the Door Access you would like to grant.");
+
+                        string doorTwo = Console.ReadLine().ToUpper();
+
+
+                        bool doorAccessGranted = _badgesRepo.AddDoorAccess(theBadge.BadgeIdNumber, doorTwo);
+                        if (doorAccessGranted)
+                        {
+                            Console.WriteLine("Access to that door has been added.");
+                            string doorTwoList = _badgesRepo.GetDoorsByIdNumber(userInput);
+                            Console.WriteLine($"{theBadge.BadgeIdNumber} this badge has access to these doors {doorTwoList}");
+                            Console.WriteLine("Any other doors y/n?");
+                            if (userInputTwo == "n") ;
+                            {
+                                break;
+                            }
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Access to that door could not be added");
+                            Console.ReadKey();
+
+
+                        }
                     }
-                    else
-                    {
-                        Console.WriteLine("Access to that door could not be added");
-                    }
+                    while (userInputTwo == "y");
+
                         break;
                     case "3":
-                        BadgesMainMenu();
-                        break;
-                        default:
+                    BadgesMainMenu();
+                    break;
+                default:
                     Console.WriteLine("Please enter a valid option");
                     break;
 
@@ -177,7 +209,7 @@ namespace Badges
             Dictionary<int, Badges> listOfBadges = _badgesRepo.PresentAllBadges();
 
             string[] objects = new string[] { "BadgeIdNumber", "DoorAccess" };
-            Console.WriteLine($"{objects[0], -10}{objects[1]}");
+            Console.WriteLine($"{objects[0],-10}{objects[1]}");
 
             foreach (KeyValuePair<Int32, Badges> badge in listOfBadges)
             {
@@ -196,7 +228,7 @@ namespace Badges
 
 
 
-            
+
 
 
 
