@@ -1,5 +1,12 @@
 # GoldBadgeFinalProjects
-Komodo Cafe these are all propmts to build different console apps the first one was komodo cafe. 
+
+
+Komodo Cafe these are all propmts to build different console apps the first one was komodo cafe.
+We used lists to build this one. 
+
+
+
+
 Komodo cafe is getting a new menu. The manager wants to be able to create new menu items, delete menu items, and receive a list of all items on the cafe's menu. She needs a console app.
 
  
